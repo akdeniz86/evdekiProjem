@@ -1,5 +1,6 @@
 package com.akdeniz.evdekiProjemPackage.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -11,12 +12,14 @@ import jakarta.persistence.Table;
 public class Product {
 
 	@Id
+	@Column(name="id")
 	Long id;
+	@Column(name="name")
 	String name;
+	@Column(name="manufacturer")
 	String manufacturer;
 	public Product() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	public Product(Long id, String name, String manufacturer) {
 		super();
